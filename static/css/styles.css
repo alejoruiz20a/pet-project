@@ -1,0 +1,92 @@
+:root {
+    --background: #18181a;
+    --header: #0f0f10;  
+    --main: #e4609b;
+    --sub: #47bac0;
+    --extra: #ffffff;
+}
+
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('/ruta/a/tu/font/CascadiaCode-Regular.ttf') format('truetype');
+    /* Agrega más fuentes y estilos según sea necesario */
+}
+
+header {
+    background-color: var(--header);
+    min-height: 5vh;
+    align-items: center;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Cascadia Code';
+    margin: 0;
+    color: var(--sub);
+}
+
+main {
+    min-height: 68vh;
+}
+
+footer {
+    background-color: var(--header);
+    position: fixed;
+    width: 100%;
+}
+
+footer h5 {
+    border: 4%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+}
+.stat {
+    margin: 0% 0%;
+}
+
+h4 {
+    color: var(--main);
+}
+
+h2 {
+    color: var(--sub)
+}
+
+.console {
+    font-family: 'Cascadia Code';
+    min-width: 400px;
+}
+
+.console input {
+    min-width: 330px;
+    background-color: var(--header);
+    color: var(--extra);
+    padding: 5px;
+    border-style: hidden;
+}
+
+.console button {
+    background-color: var(--header);
+    color: var(--extra);
+    border-style: hidden;
+    padding: 5px;
+    border-color: #ffffff;
+}

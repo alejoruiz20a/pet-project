@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Pet</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="[LOGO DEL PROYECTO]">
+    </header>
+    <main>
+        <div>
+            <h1>LOGIN</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <h3>Username: </h3>
+                    <input type="text" name="user" placeholder="Username" required>
+                </div>
+                <div>
+                    <h3>Password: </h3>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit">GO!</button>
+            </form>
+            <h2>{{mesage}}</h2>
+        </div>
+    </main>
+    <footer>
+        <h5>Created by Alejandro Amador Ruiz</h5>
+    </footer>
+</body>
+</html>

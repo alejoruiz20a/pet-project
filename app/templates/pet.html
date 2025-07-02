@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Pet</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="[LOGO DEL PROYECTO]">
+    </header>
+    <main>
+        <div class="pet">
+            <h1>{{pet.name}}</h1>
+            <div class="stats">
+                <div class="stat">
+                    <h4>age</h4>
+                    <h2>{{pet.age}}</h2>
+                </div class="stat">
+                <div class="stat">
+                    <h4>health</h4>
+                    <h2>{{pet.health}}</h2>
+                </div>
+                <div>
+                    <h4>money</h4>
+                    <h2>{{pet.money}}</h2>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <h4>energy</h4>
+                    <h2>{{pet.energy}}</h2>
+                </div>
+                <div class="stat">
+                    <h4>happiness</h4>
+                    <h2>{{pet.happiness}}</h2>
+                </div>
+                <div class="stat">
+                    <h4>hunger</h4>
+                    <h2>{{pet.hunger}}</h2>
+                </div>
+                <div class="stat">
+                    <h4>hygiene</h4>
+                    <h2>{{pet.shittiness}}</h2>
+                </div>
+            </div>
+            <div>
+                <img src="{% static 'img/pets/' %}{{ pet.image }}.gif" alt="aaaaaaaaaa">
+                {% if hat %}
+                <img src="{% static 'img/accesories/hat.png' %}" alt="aaaaaaaaaa">
+                {% endif %}
+            </div>
+            <h3>
+                {{console}}
+            </h3>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="console">
+                    <input type="text" name="instruction" placeholder="Tell {{pet.name}} what to do!" autocomplete="off" autofocus>
+                    <button type="submit">GO!</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h5>Created by Alejandro Amador Ruiz</h5>
+    </footer>
+</body>
+</html>
