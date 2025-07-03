@@ -185,7 +185,7 @@ def pet(request):
                     pet.energy -= int(earned//2)
                     console = f"{pet.name} worked and won ${earned}!"
                 else:
-                    console = f"{pet.name} doesn't have enough money to work."
+                    console = f"{pet.name} doesn't have enough energy to work."
                 if pet.energy<0:
                     pet.energy = 0
                 
