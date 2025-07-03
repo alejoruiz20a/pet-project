@@ -15,6 +15,11 @@ Este es un proyecto de **mascota virtual** desarrollado con **Django** en el bac
 * Mensajes de consola que simulan una mini-narrativa
 
 ---
+ 
+## Captura de juego 
+![Captura de juego](assets/image.png)
+
+---
 
 ## Comandos soportados
 
